@@ -23,12 +23,18 @@ class _$BoayantRouter extends RootStackRouter {
           orElse: () => const OnboardingRouteArgs());
       return MaterialPageX<dynamic>(
           routeData: routeData, child: OnboardingScreen(key: args.key));
+    },
+    SignupRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+          routeData: routeData, child: const SignupScreen());
     }
   };
 
   @override
-  List<RouteConfig> get routes =>
-      [RouteConfig(OnboardingRoute.name, path: '/onboarding')];
+  List<RouteConfig> get routes => [
+        RouteConfig(OnboardingRoute.name, path: '/onboarding'),
+        RouteConfig(SignupRoute.name, path: '/signup')
+      ];
 }
 
 /// generated route for
@@ -50,4 +56,12 @@ class OnboardingRouteArgs {
   String toString() {
     return 'OnboardingRouteArgs{key: $key}';
   }
+}
+
+/// generated route for
+/// [SignupScreen]
+class SignupRoute extends PageRouteInfo<void> {
+  const SignupRoute() : super(SignupRoute.name, path: '/signup');
+
+  static const String name = 'SignupRoute';
 }

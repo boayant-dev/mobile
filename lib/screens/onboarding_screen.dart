@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -5,6 +6,7 @@ import 'package:wave/config.dart';
 import 'package:wave/wave.dart';
 
 import '../core/constants.dart';
+import '../core/route.dart';
 
 class OnboardingScreen extends StatelessWidget {
   final _pageModels = [
@@ -66,13 +68,17 @@ class OnboardingScreen extends StatelessWidget {
             TextButton(
               child: const Text('Sign Up'),
               style: _buttonStyle,
-              onPressed: () {},
+              onPressed: () {
+                context.router.replace(const SignupRoute());
+              },
             ),
             const SizedBox(height: 10),
             TextButton(
                 child: const Text('Sign In'),
                 style: _buttonStyle,
-                onPressed: () {})
+                onPressed: () {
+                  context.router.replace(const SignupRoute());
+                })
           ]),
           onDone: () {
             //TODO: set already_onboarded to true in local persistence
