@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       ),
       routeInformationParser: _router.defaultRouteParser(),
       routerDelegate: _router.delegate(
-        initialRoutes: [OnboardingRoute()],
+        initialRoutes: [RootRoute()],
       ),
     );
   }
