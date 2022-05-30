@@ -1,11 +1,10 @@
-import 'package:boayant/core/constants.dart';
 import 'package:flutter/material.dart';
 
 class DottedHorizontalLine extends CustomPainter {
   Paint _paint;
   DottedHorizontalLine(this._paint) {
     _paint = Paint();
-    _paint.color = Constants.boayantBlue; //dots color
+    _paint.color = Colors.black; //dots color
     _paint.strokeWidth = 2; //dots thickness
     _paint.strokeCap = StrokeCap.square; //dots corner edges
   }
